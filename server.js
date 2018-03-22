@@ -20,10 +20,7 @@ MongoClient.connect(uri, function (err, database) {
   
   assert.equal(null, err);
 
-  //require("./api")(app, database); 
-  app.get("/", function(req,res){
-    res.send(" Cool everything ok ");
-  })
+  require("./api")(app, database); 
 
   app.listen(app.get("PORT"), function () {
     if (process.env.NODE_ENV !== "production") {
