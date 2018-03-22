@@ -1,6 +1,6 @@
 
 module.exports = function (app, database) {
-  //var db = database.db("video"), limit = 25, result = {};
+  var db = database.db("video"), limit = 25, result = {};
   
   
   // check perfomance on poster query and to avoid skip
