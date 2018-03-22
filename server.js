@@ -11,7 +11,12 @@ app.set("PORT", (process.env.PORT || 8010));
 
 //app.use(express.static(path.resolve(__dirname, "docs")));
 
-require("./api")(app);
+//require("./api")(app);
+
+app.get("/",function(req,res){
+  var port = process.env.PORT;
+  res.send(`hellor port", ${port}`);
+})
 
 app.listen(app.get("PORT"), function () {
   if (process.env.NODE_ENV !== "production") {
