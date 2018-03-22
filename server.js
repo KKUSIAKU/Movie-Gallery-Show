@@ -9,14 +9,9 @@ var app = express();
 
 app.set("PORT", (process.env.PORT || 8010));
 
-app.use(express.static(path.resolve(__dirname, "docs")));
+//app.use(express.static(path.resolve(__dirname, "docs")));
 
-
-/*app.get("/", function (req, res) {
-
-  //app.use(express.static(path.resolve(__dirname, "docs")));
-  res.send("hello app")
-});*/
+require("./api")(app);
 
 app.listen(app.get("PORT"), function () {
   if (process.env.NODE_ENV !== "production") {
