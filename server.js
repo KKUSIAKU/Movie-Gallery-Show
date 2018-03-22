@@ -1,6 +1,7 @@
-var express = require("express");
-var assert = require("assert");
-var bodyParser = require("body-parser"); 
+var express = require("express"),
+  path = require("path"),
+  assert = require("assert"),
+  bodyParser = require("body-parser");
 
 var app = express();
 //app.use(bodyParser.json()); 
@@ -8,10 +9,14 @@ var app = express();
 
 app.set("PORT", (process.env.PORT || 8010));
 
-app.get("/", function(req,res){
+app.use(express.static(path.resolve(__dirname, "docs")));
 
-  res.send("Wellcome app");
-});
+
+/*app.get("/", function (req, res) {
+
+  //app.use(express.static(path.resolve(__dirname, "docs")));
+  res.send("hello app")
+});*/
 
 app.listen(app.get("PORT"), function () {
   if (process.env.NODE_ENV !== "production") {
