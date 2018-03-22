@@ -14,8 +14,8 @@ app.set("PORT", (process.env.PORT || 8010));
 //require("./api")(app);
 
 app.get("/",function(req,res){
-  var port = process.env.PORT;
-  res.send(`hellor port", ${port}`);
+  var port = process.env;
+  res.send(port);
 })
 
 app.listen(app.get("PORT"), function () {
