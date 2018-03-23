@@ -1,14 +1,15 @@
 
 module.exports = function (app, database) {
-  var db = database.db("video"), limit = 25, result = {};
-  
-  
+
+
+
   // check perfomance on poster query and to avoid skip
   app.get("/videos", function (req, res) {
-  
+    var db = database.db("video"), limit = 25, result = {};
     //res.send(" routes videos");
-    
+
     var page = req.query.page ? req.query.page : 0;
+    /*
     var cursor = db.collection("movieDetails")
       .find({ poster: { $ne: null } },
         { _id: 0, title: 1, poster: 1, genres: 1, plot: 1, year: 1 })
@@ -31,8 +32,9 @@ module.exports = function (app, database) {
       .catch(function onCursorError(err) {
         console.log("error in movies fetching promise chain", err.message);
       });
+      */
+    res.send(" routes videos");
 
-      
   });
 
 };
