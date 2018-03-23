@@ -5,10 +5,20 @@ module.exports = function (app, database) {
 
   // check perfomance on poster query and to avoid skip
   app.get("/videos", function (req, res) {
-    var db = database.db("video"), limit = 25, result = {};
+    
+    res.send(" Hello from videos routes");
+    
+    
+    
+    
+    
+    
+    // 
+    
+    //var db = database.db("video"), limit = 25, result = {};
     //res.send(" routes videos");
 
-    var page = req.query.page ? req.query.page : 0;
+    //var page = req.query.page ? req.query.page : 0;
     /*
     var cursor = db.collection("movieDetails")
       .find({ poster: { $ne: null } },
