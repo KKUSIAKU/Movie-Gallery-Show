@@ -1,0 +1,53 @@
+.search-pages button {
+  color: #fd7e14; }
+
+.article-title {
+  font-size: 16px; }
+
+#nav-footer {
+  min-width: 80%;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important; }
+  #nav-footer #footer {
+    min-width: 80%;
+    text-align: center; }
+    #nav-footer #footer .nav-link {
+      min-width: 100px; }
+
+.articleItem {
+  flex: 0 0 300px;
+  overflow: hidden; }
+
+body {
+  padding-top: 5rem; }
+
+/*
+#movies-search-container{
+  box-sizing: border-box;
+  height: 100px;
+}
+
+#search-icon{
+  left:-30px;
+  top:25%;
+}
+*/
+.search-form {
+  height: 50px; }
+
+.search-form-icon {
+  width: 50px;
+  font-size: 25px; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*# sourceMappingURL=style.css.map*/

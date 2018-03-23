@@ -1,0 +1,16 @@
+#nav-footer{
+  min-width:80%; 
+  display: flex;
+  justify-content: center!important; 
+  align-items: center!important; 
+ 
+  #footer{
+    min-width:80%;
+    text-align: center;
+    .nav-link{
+      min-width:100px;
+      
+    }
+  }
+ 
+ }
