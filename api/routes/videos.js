@@ -5,16 +5,24 @@ module.exports = function (app, database) {
 
   // check perfomance on poster query and to avoid skip
   app.get("/videos", function (req, res) {
-    
+    var db;
+
+    try {
+      db = database.db("video");
+    }
+    catch (e) {
+      res.send("error on videos routes");
+    }
+
     res.send(" Hello from videos routes");
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     // 
-    
+
     //var db = database.db("video"), limit = 25, result = {};
     //res.send(" routes videos");
 
