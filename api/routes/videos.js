@@ -25,8 +25,8 @@ module.exports = function (app, database) {
         .then(function onCursorToArrayFulFilled(data) {
           result.movies = data;
           result.page = page;
-          res.jsonp(result);
-          res.send(" Hello from videos routes");
+          res.json(result);
+          ///res.send(" Hello from videos routes");
         })
 
         .catch(function onCursorError(err) {
