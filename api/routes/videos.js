@@ -11,7 +11,7 @@ module.exports = function (app, database) {
       db = database.db("video");
     }
     catch (e) {
-      res.send(`error ${e.message}`);
+      res.send(`error ${e.message}  ${database}`);
     }
 
     res.send(" Hello from videos routes");
