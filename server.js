@@ -19,6 +19,7 @@ app.set("PORT", (process.env.PORT || 8010));
 MongoClient.connect(uri, function (err, database) {
   
   assert.equal(null, err);
+  assert.ok(database);
 
   require("./api")(app, database); 
 
