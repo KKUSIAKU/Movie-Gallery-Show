@@ -75,7 +75,7 @@ module.exports = function (app, database) {
         console.log("error in movies fetching promise chain", err.message);
       });
       */
-    res.send(" routes videos");
+    //res.send(" routes videos");
 
   });
 
