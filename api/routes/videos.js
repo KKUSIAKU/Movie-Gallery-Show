@@ -26,6 +26,7 @@ module.exports = function (app, database) {
           result.movies = data;
           result.page = page;
           res.jsonp(result);
+          res.send(" Hello from videos routes");
         })
 
         .catch(function onCursorError(err) {
@@ -37,7 +38,7 @@ module.exports = function (app, database) {
       res.send(`error ${e.message}  ${database}`);
     }
 
-    res.send(" Hello from videos routes");
+   
 
 
 
