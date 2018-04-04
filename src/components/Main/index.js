@@ -33,7 +33,7 @@ class Main extends React.Component {
       <main>
         <SearchForm/>
         <Filter/>
-        <p className="text-info px-5">{`${ln} results`} </p>
+        <p className="text-info px-5">{`${this.props.filter !=="All" ?movies.length.toString() +" over " + ln.toString() :ln} results`} </p>
         <div className="d-flex flex-wrap justify-content-center">
           {movies.map((movie, index) =>
             <div className="articleItem card border-secondary m-1 p-2" key={index}>
@@ -57,7 +57,8 @@ const mapStateToProps = (state) => {
 
   return {
     movies,
-    numberOfResult
+    numberOfResult,
+    filter
   };
 };
 

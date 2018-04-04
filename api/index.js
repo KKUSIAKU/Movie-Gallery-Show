@@ -6,5 +6,4 @@ module.exports = function (app, database) {
   videosRoute(app, database);
   searchRoute(app, database);
   hompePage(app);
-  //videosRoute(app);
 }; 

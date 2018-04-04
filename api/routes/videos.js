@@ -1,6 +1,6 @@
 
 module.exports = function (app, database) {
-  // check perfomance on poster query and to avoid skip
+
   app.get("/videos", function (req, res) {
     var db, page, cursor, limit = 25, result = {};
 
@@ -13,7 +13,6 @@ module.exports = function (app, database) {
           { _id: 0, title: 1, poster: 1, genres: 1, plot: 1, year: 1 })
         .skip(limit * (parseInt(page))).sort({ _id: -1 }).limit(limit);
 
-      // put count and getGenres in parrallel operations
       cursor.count(false)
         .then(function onCountFulfilled(data) {
           result.numberOfResult = data;

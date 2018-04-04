@@ -1,5 +1,7 @@
 import React from "react";
 
+/// see edx search form 
+
 function getSearchFormValue() {
   return document.getElementById("movies-search").value;
 }
